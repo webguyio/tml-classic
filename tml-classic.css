@@ -1,0 +1,328 @@
+.tml {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.tml,
+.tml * {
+	box-sizing: border-box;
+}
+
+.tml input,
+.tml textarea,
+.tml select {
+	width: 100%;
+	margin: 0.5em 0;
+	padding: 1em;
+}
+
+.tml input[type="checkbox"],
+.tml input[type="radio"],
+.tml .tml-rememberme-wrap input {
+	margin: 0 0.5em 0 0;
+	vertical-align: middle;
+	width: auto;
+}
+
+.tml input[type="submit"],
+.tml #submit,
+.tml #wp-submit {
+	font-size: 0.75em;
+	color: #fff;
+	padding: 1em 1.5em;
+	border: 0;
+	border-radius: 2px;
+	background: #0073aa;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.tml input[type="submit"]:hover,
+.tml #submit:hover,
+.tml #wp-submit:hover,
+.tml input[type="submit"]:focus,
+.tml #submit:focus,
+.tml #wp-submit:focus, {
+	opacity: 0.8;
+}
+
+.tml .message,
+.tml .success,
+.tml .error {
+	padding: 1em;
+}
+
+.tml .message {
+	border: 1px solid #faebcc;
+	background-color: #fcf8e3;
+	color: #8a6d3b;
+}
+
+.tml .message a {
+	color: #66512c;
+}
+
+.tml .success {
+	border: 1px solid #d6e9c6;
+	background-color: #dff0d8;
+	color: #3c763d;
+}
+
+.tml .success a {
+	color: #2b542c;
+}
+
+.tml .error {
+	border: 1px solid #ebccd1;
+	background-color: #f2dede;
+	color: #a94442;
+}
+
+.tml .error a {
+	color: #843534;
+}
+
+.tml p {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+}
+
+.tml label {
+	display: block;
+	text-align: left;
+}
+
+.tml .tml-rememberme-wrap label {
+	display: inline;
+	font-size: 90%;
+}
+
+.tml .tml-action-links {
+	display: inline-block;
+	list-style: none;
+	margin: 0.5em auto;
+	padding: 0;
+	text-align: center;
+}
+
+.tml .tml-action-links li {
+	border: none;
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
+	float: left;
+	line-height: 1;
+	list-style: none;
+	margin: 0 0.5em 0 0;
+	padding: 0 0.5em 0 0;
+}
+
+.tml .tml-action-links li:last-child {
+	border-right: none;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.tml .tml-action-links a {
+	border: none;
+	display: block;
+	padding: 0;
+	text-decoration: none;
+}
+
+.tml .tml-rememberme-submit-wrap:before,
+.tml .tml-rememberme-submit-wrap:after,
+.tml .tml-action-links:before,
+.tml .tml-action-links:after {
+	content: "";
+	display: table;
+}
+
+.tml .tml-rememberme-submit-wrap:after,
+.tml .tml-action-links:after {
+	clear: both;
+}
+
+.tml .tml-user-avatar {
+	text-align: left;
+}
+
+.mu_register .hint {
+	font-size: 12px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.mu_register label.checkbox {
+	display: inline;
+}
+
+#pass-strength-result {
+	background-color: #eee;
+	border: 1px solid #ddd;
+	color: #23282d;
+	font-weight: 600;
+	margin: -1px 0 1.5em;
+	padding: 3px 5px;
+	text-align: center;
+	width: 100%;
+	opacity: 0;
+}
+
+#pass-strength-result.short {
+	background-color: #f1adad;
+	border-color: #e35b5b;
+	opacity: 1;
+}
+
+#pass1.short,
+#pass1-text.short {
+	border-color: #e35b5b;
+}
+
+#pass-strength-result.bad {
+	background-color: #fbc5a9;
+	border-color: #f78b53;
+	opacity: 1;
+}
+
+#pass1.bad,
+#pass1-text.bad {
+	border-color: #f78b53;
+}
+
+#pass-strength-result.good {
+	background-color: #ffe399;
+	border-color: #ffc733;
+	opacity: 1;
+}
+
+#pass1.good,
+#pass1-text.good {
+	border-color: #ffc733;
+}
+
+#pass-strength-result.strong {
+	background-color: #c1e1b9;
+	border-color: #83c373;
+	opacity: 1;
+}
+
+#pass1.strong,
+#pass1-text.strong {
+	border-color: #83c373;
+}
+
+.tml .password-input-wrapper {
+	display: table;
+	width: 100%;
+}
+
+.tml .input.password-input {
+	display: table-cell;
+	margin: 0;
+}
+
+.tml .pw-weak {
+	display: none;
+	margin-bottom: 1.5em;
+}
+
+.tml .wp-hide-pw {
+	cursor: pointer;
+	display: table-cell;
+	margin: 0;
+	padding: 0 0.5em;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+#pass1,
+#pass1-text {
+	width: 100%;
+}
+
+#pass1-text,
+.show-password #pass1 {
+	display: none;
+}
+
+.show-password #pass1-text {
+	display: inline-block;
+}
+
+.tml-settings {
+	max-width: 100%;
+}
+
+.tml-settings .tml-form-table {
+	border-collapse: collapse;
+}
+
+.tml-settings .tml-form-table th,
+.tml-settings .tml-form-table td {
+	display: block;
+	vertical-align: middle;
+	width: auto;
+}
+
+.tml-settings .screen-reader-text,
+.tml-settings .screen-reader-text span {
+	height: 1px;
+	left: -1000em;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+
+.tml-settings .wp-pwd {
+	text-align: right;
+}
+
+.tml-settings .wp-pwd .dashicons {
+	font-size: 1em;
+	line-height: 1;
+	height: 1em;
+	width: 1em;
+	vertical-align: middle;
+}
+
+.tml-settings #pass-strength-result {
+	margin: 0.5em 0;
+}
+
+.hidden,
+.no-js .hide-if-no-js,
+.js .hide-if-js {
+	display: none;
+}
+
+@media(min-width: 768px) {
+	.tml .tml-submit-wrap input {
+		width: auto;
+	}
+
+	.tml-login .tml-rememberme-submit-wrap {
+		display: table;
+		width: 100%;
+		margin-bottom: 1.5em;
+	}
+
+	.tml-login .tml-rememberme-wrap {
+		display: table-cell;
+	}
+
+	.tml-login .tml-submit-wrap {
+		display: table-cell;
+		text-align: right;
+	}
+
+	.tml-login .tml-submit-wrap input {
+		width: auto;
+		margin: 0;
+	}
+
+	.tml-settings .tml-submit-wrap input {
+		width: auto;
+	}
+}
