@@ -1,17 +1,17 @@
 {
-  "name": "TML Classic",
-  "version": "0.1",
-  "author": "Web Guy",
-  "homepage": "https://webguyio.github.io/tml-classic/",
-  "requires": "5.0",
-  "requires_php": "8.0",
-  "tested": "6.9",
-  "last_updated": "2026-04-20",
-  "description": "Display themed WordPress login, registration, and lost password forms on any front-end page using a shortcode.",
-  "changelog": "<h4>0.1</h4><li>Fork of old Theme My Login branch ([6.4.17](https://downloads.wordpress.org/plugin/theme-my-login.6.4.17.zip)) by Jeff Farthing (@jfarthing84)</li>",
-  "package": "https://webguyio.github.io/tml-classic/tml-classic.zip",
-  "icons": {
-    "1x": "https://webguyio.github.io/tml-classic/icon.png",
-    "2x": "https://webguyio.github.io/tml-classic/icon.png"
-  }
+	"name": "TML Classic",
+	"version": "0.1",
+	"author": "Web Guy",
+	"homepage": "https://webguyio.github.io/tml-classic/",
+	"requires": "5.0",
+	"requires_php": "8.0",
+	"tested": "6.9",
+	"last_updated": "2026-04-20",
+	"description": "Display themed WordPress login, registration, and lost password forms on any front-end page using a shortcode.",
+	"changelog": "<h4>0.1</h4><li>Fork of old Theme My Login branch ([6.4.17](https://downloads.wordpress.org/plugin/theme-my-login.6.4.17.zip)) by Jeff Farthing (@jfarthing84)</li>",
+	"package": "https://webguyio.github.io/tml-classic/tml-classic.zip",
+	"icons": {
+		"1x": "https://webguyio.github.io/tml-classic/icon.png",
+		"2x": "https://webguyio.github.io/tml-classic/icon.png"
+	}
 }
