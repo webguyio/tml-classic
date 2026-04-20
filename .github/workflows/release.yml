@@ -45,10 +45,11 @@ jobs:
 
       - name: Build zip
         run: |
+          REPO_DIR=$(basename "$GITHUB_WORKSPACE")
           cd ..
-          zip -r tml-classic/docs/tml-classic.zip tml-classic \
-            --exclude "tml-classic/.git*" \
-            --exclude "tml-classic/docs/*"
+          zip -r "$GITHUB_WORKSPACE/docs/tml-classic.zip" "$REPO_DIR" \
+            --exclude "$REPO_DIR/.git*" \
+            --exclude "$REPO_DIR/docs/*"
 
       - name: Commit build artifacts
         run: |
