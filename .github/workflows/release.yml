@@ -49,7 +49,7 @@ jobs:
           import zipfile, os
           with zipfile.ZipFile('docs/tml-classic.zip', 'w', zipfile.ZIP_DEFLATED) as zf:
             for root, dirs, files in os.walk('.'):
-              dirs[:] = [d for d in dirs if d not in ['.git', 'docs']]
+              dirs[:] = [d for d in dirs if d not in ['.git', '.github', 'docs']]
               files = [f for f in files if f != '.gitignore']
               for file in files:
                 path = os.path.join(root, file)
