@@ -9,6 +9,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 if ( !class_exists( 'TML_Classic' ) ) :
+
 class TML_Classic extends TML_Classic_Abstract {
 	const VERSION = TML_CLASSIC_VERSION;
 

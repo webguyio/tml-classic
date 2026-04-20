@@ -9,6 +9,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 if ( !class_exists( 'TML_Classic_Widget' ) ) :
+
 class TML_Classic_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct( 'tml-classic', __( 'TML Classic', 'tml-classic' ), array(

@@ -10,6 +10,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 if ( !class_exists( 'TML_Classic_Custom_Passwords' ) ) :
+
 class TML_Classic_Custom_Passwords extends TML_Classic_Abstract {
 	public static function get_object( $class = null ) {
 		return parent::get_object( __CLASS__ );

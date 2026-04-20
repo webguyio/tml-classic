@@ -1,3 +1,15 @@
+<?php
+/*
+ * @package TML_Classic
+ */
+
+if ( !defined( 'ABSPATH' ) ) {
+	status_header( 404 );
+	exit;
+}
+
+if ( !class_exists( 'TML_Classic_Updater' ) ) :
+
 class TML_Classic_Updater {
 	private $plugin_slug;
 	private $plugin_file;
@@ -98,3 +110,5 @@ class TML_Classic_Updater {
 		return $version;
 	}
 }
+
+endif;

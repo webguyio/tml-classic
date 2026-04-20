@@ -9,6 +9,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 if ( !class_exists( 'TML_Classic_Template' ) ) :
+
 class TML_Classic_Template extends TML_Classic_Abstract {
 	private $is_active = false;
 

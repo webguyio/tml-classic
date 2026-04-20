@@ -9,6 +9,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 if ( !class_exists( 'TML_Classic_Abstract' ) ) :
+
 abstract class TML_Classic_Abstract {
 	private static $objects = array();
 	protected $options_key;

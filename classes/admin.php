@@ -9,6 +9,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 if ( !class_exists( 'TML_Classic_Admin' ) ) :
+
 class TML_Classic_Admin extends TML_Classic_Abstract {
 	protected $options_key = 'tml_classic';
 

@@ -10,6 +10,7 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 if ( !class_exists( 'TML_Classic_Custom_Email' ) ) :
+
 class TML_Classic_Custom_Email extends TML_Classic_Abstract {
 	protected $options_key = 'tml_classic_email';
 	protected $mail_from;
