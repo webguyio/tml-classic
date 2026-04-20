@@ -65,7 +65,7 @@ Adds security options like disabling wp-login.php, brute-force protection, and m
 
 ## Frequently Asked Questions
 
-## Why does this fork exist?
+### Why does this fork exist?
 
 Theme My Login 6.x was a popular, straightforward approach to themed login forms that many sites relied on. When version 7 arrived it was a significant rewrite with a different approach, and the 6.x branch was retired. Over time, the original 6.4.17 release developed compatibility issues with newer versions of WordPress and PHP. TML Classic picks up where 6.4.17 left off, keeping the classic approach working on modern installs.
 
