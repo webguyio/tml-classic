@@ -45,10 +45,16 @@ jobs:
 
       - name: Build zip
         run: |
-          mkdir -p /tmp/tml-classic
-          rsync -a --exclude='.git' --exclude='.gitignore' --exclude='docs' . /tmp/tml-classic/
-          cd /tmp
-          zip -r "$GITHUB_WORKSPACE/docs/tml-classic.zip" tml-classic
+          python3 -c "
+          import zipfile, os
+          with zipfile.ZipFile('docs/tml-classic.zip', 'w', zipfile.ZIP_DEFLATED) as zf:
+            for root, dirs, files in os.walk('.'):
+              dirs[:] = [d for d in dirs if d not in ['.git', 'docs']]
+              files = [f for f in files if f != '.gitignore']
+              for file in files:
+                path = os.path.join(root, file)
+                zf.write(path, os.path.join('tml-classic', path[2:]))
+          "
 
       - name: Commit build artifacts
         run: |
