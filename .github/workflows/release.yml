@@ -45,9 +45,10 @@ jobs:
 
       - name: Build zip
         run: |
-          zip -r docs/tml-classic.zip . \
-            --exclude "*.git*" \
-            --exclude "docs/*"
+          cd ..
+          zip -r tml-classic/docs/tml-classic.zip tml-classic \
+            --exclude "tml-classic/.git*" \
+            --exclude "tml-classic/docs/*"
 
       - name: Commit build artifacts
         run: |
