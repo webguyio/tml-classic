@@ -33,7 +33,7 @@ jobs:
         run: |
           TODAY=$(date -u +%Y-%m-%d)
           VERSION="${{ steps.version.outputs.version }}"
-          jq \
+          jq --tab \
             --arg v "$VERSION" \
             --arg d "$TODAY" \
             --arg c "${{ steps.changelog.outputs.changelog }}" \
@@ -43,11 +43,9 @@ jobs:
 
       - name: Build zip
         run: |
-          cd ..
-          zip -r tml-classic/docs/tml-classic.zip tml-classic \
-            --exclude "tml-classic/.git*" \
-            --exclude "tml-classic/.gitignore" \
-            --exclude "tml-classic/docs/*"
+          zip -r docs/tml-classic.zip . \
+            --exclude "*.git*" \
+            --exclude "docs/*"
 
       - name: Commit build artifacts
         run: |
