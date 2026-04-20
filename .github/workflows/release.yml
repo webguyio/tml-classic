@@ -26,6 +26,7 @@ jobs:
             | sed '/^$/d' \
             | sed 's/^### \(.*\)/<h4>\1<\/h4>/' \
             | sed 's/^\* \(.*\)/<li>\1<\/li>/' \
+            | sed 's/\[\([^]]*\)\](\([^)]*\))/<a href="\2">\1<\/a>/g' \
             | tr -d '\n')
           echo "changelog=$CHANGELOG" >> $GITHUB_OUTPUT
 
@@ -40,6 +41,7 @@ jobs:
             '.version = $v | .last_updated = $d | .changelog = $c' \
             docs/updates.json > docs/updates.json.tmp
           mv docs/updates.json.tmp docs/updates.json
+          truncate -s -1 docs/updates.json
 
       - name: Build zip
         run: |
