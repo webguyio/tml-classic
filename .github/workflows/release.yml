@@ -19,12 +19,15 @@ jobs:
           VERSION=$(grep -m1 "^Version:" tml-classic.php | awk '{print $2}')
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-      - name: Build zip
+      - name: Extract changelog
+        id: changelog
         run: |
-          zip -r docs/tml-classic.zip . \
-            --exclude "*.git*" \
-            --exclude ".gitignore" \
-            --exclude "docs/*"
+          CHANGELOG=$(awk '/^## Changelog/{found=1; next} found && /^## /{exit} found{print}' readme.md \
+            | sed '/^$/d' \
+            | sed 's/^### \(.*\)/<h4>\1<\/h4>/' \
+            | sed 's/^\* \(.*\)/<li>\1<\/li>/' \
+            | tr -d '\n')
+          echo "changelog=$CHANGELOG" >> $GITHUB_OUTPUT
 
       - name: Update updates.json
         run: |
@@ -33,9 +36,18 @@ jobs:
           jq \
             --arg v "$VERSION" \
             --arg d "$TODAY" \
-            '.version = $v | .last_updated = $d' \
+            --arg c "${{ steps.changelog.outputs.changelog }}" \
+            '.version = $v | .last_updated = $d | .changelog = $c' \
             docs/updates.json > docs/updates.json.tmp
           mv docs/updates.json.tmp docs/updates.json
+
+      - name: Build zip
+        run: |
+          cd ..
+          zip -r tml-classic/docs/tml-classic.zip tml-classic \
+            --exclude "tml-classic/.git*" \
+            --exclude "tml-classic/.gitignore" \
+            --exclude "tml-classic/docs/*"
 
       - name: Commit build artifacts
         run: |

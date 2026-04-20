@@ -97,7 +97,9 @@ if ( is_multisite() ) {
 }
 
 if ( !function_exists( 'tml_classic' ) ) :
+
 function tml_classic( $args = '' ) {
 	echo TML_Classic::get_object()->shortcode( wp_parse_args( $args ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- output escaped internally by shortcode()
 }
+
 endif;
